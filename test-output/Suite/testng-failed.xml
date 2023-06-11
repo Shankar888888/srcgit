@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="HRM Application Nucot(failed)">
+    <parameter name="passWord" value="admin123"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="runningdifferent.RegressionSuiteConcept">
+        <methods>
+          <include name="userLoginTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="getCurrentUrlPage"/>
+          <include name="closeBrwser"/>
+          <include name="getTitlePage"/>
+        </methods>
+      </class> <!-- runningdifferent.RegressionSuiteConcept -->
+    </classes>
+  </test> <!-- HRM Application Nucot(failed) -->
+  <test thread-count="5" name="SalesForce Application Nucot(failed)">
+    <parameter name="passWord" value="admin123"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://login.salesforce.com/"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="runningdifferent.SmokeTestConcept">
+        <methods>
+          <include name="closeBrwser"/>
+          <include name="userLoginTest"/>
+          <include name="setUp"/>
+          <include name="getTitlePage"/>
+          <include name="getCurrentUrlPage"/>
+        </methods>
+      </class> <!-- runningdifferent.SmokeTestConcept -->
+    </classes>
+  </test> <!-- SalesForce Application Nucot(failed) -->
+</suite> <!-- Failed suite [Suite] -->
